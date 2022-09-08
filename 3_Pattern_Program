@@ -1,4 +1,4 @@
-public class 4_Pattern_Program{
+public class 3_Pattern_Program{
      public static void main(String []args){
         String str = "PROGRAM";
         int len  = str.length();
