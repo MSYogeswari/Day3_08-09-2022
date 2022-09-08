@@ -1,0 +1,29 @@
+import java.util.*;
+import java.util.Arrays;
+import java.lang.Math;
+public class HelloWorld{
+     public static void main(String []args){
+        Scanner sc = new Scanner(System.in);
+        int[] num = new int[5];
+        HashMap<Integer,Integer> hm = new HashMap<Integer,Integer>();
+        System.out.println("Enter numbers");
+        for(int i=0;i<5;i++)
+            num[i] = sc.nextInt();
+        int sqr,weight;
+        for(int i=0;i<5;i++)
+        {
+            weight = 0;
+            sqr = (int)Math.sqrt(num[i]); 
+            //System.out.println("Sqeaw" + sqr);
+            if(sqr * sqr == num[i] )
+                weight = weight + 5;
+            if( (num[i] %4 ==0) && (num[i] %6 == 0))
+                weight = weight + 4;
+            if(num[i] %2 == 0)
+                weight = weight + 3;
+        hm.put(num[i],weight);
+        }
+        for(hm.Entry x : hm.entrySet)
+        System.out.println(hm);
+     }
+}
