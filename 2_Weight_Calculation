@@ -23,7 +23,7 @@ public class HelloWorld{
                 weight = weight + 3;
         hm.put(num[i],weight);
         }
-        for(hm.Entry x : hm.entrySet)
-        System.out.println(hm);
+        for (Integer key: hm.keySet()){  
+			System.out.println("<" + key + "," + hm.get(key) +">");}
      }
 }
