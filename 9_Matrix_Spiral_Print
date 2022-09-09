@@ -1,0 +1,33 @@
+class HelloWorld {
+    public static void main(String[] args) {
+        int[][] mat = new int[][]{{1,2,3,4},{5,6,7,8},{9,10,11,12},{13,14,15,16}};
+        int len=mat.length;
+        int i=0,j=0,k=0,l=0;
+        int min =0, max = len;
+        System.out.println("Spiral Form of matrix");
+        while(min<max)
+        {
+        for(i=min;i<max;i++)
+        {
+            System.out.print(mat[min][i]+",");
+        }
+        --i;
+        for(j=min+1;j<max;j++)
+        {
+            System.out.print(mat[j][i]+",");
+        }
+        --j;
+        for(k=max-2;k>=min;k--)
+        {
+            System.out.print(mat[j][k]+",");
+        }
+        ++k;
+        for(l=max-2;l>min;l--)
+        {
+            System.out.print(mat[l][k]+" ");
+        }
+        min++;
+        max--;
+        }
+    }
+}
