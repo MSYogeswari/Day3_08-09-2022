@@ -1,0 +1,21 @@
+import java.util.*;
+import java.util.Arrays;
+public class HelloWorld{
+     public static void main(String []args){
+        Scanner sc = new Scanner(System.in);
+        int arr[] = new int[]{3,2,6,5,1,7,4};
+        int out[] = new int[arr.length];
+        sc.close();
+       Arrays.sort(arr);
+       System.out.println(Arrays.toString(arr));
+        int med = (arr.length/2);
+        int p=0;
+        out[p] = arr[med];
+        for(int i=1;i<=med;i++)
+        {
+           out[++p] = arr[med+i];
+            out[++p] = arr[med-i];
+        }
+        System.out.println("Output" + Arrays.toString(out));
+     }
+}
